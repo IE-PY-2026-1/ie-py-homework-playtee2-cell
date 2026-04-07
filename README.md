@@ -38,7 +38,7 @@
     * **적용 내용:** 단순히 'protein'이라는 변수 하나만 사용하는 것이 아니라, 데이터의 성격에 맞춰 문자열(str - 제품명), 정수형(int - 중량), 실수형(float - 단백질 함량), 불리언(bool - 고단백 여부) 등으로 자료형을 명확히 분리하여 프로그램의 구조적 완성도를 높임.
     
 ### **📁 증빙 자료:**
-  * (첨부 후 링크)
+  * https://drive.google.com/file/d/17hg9xCdhT4gsiX_Vg1QvtHKXmzzrlbiE/view?usp=drive_link
 
 
 <br>
