@@ -72,8 +72,9 @@
     * **해결:** append() 하기 전, 혹은 연산을 수행하는 시점에 int()와 float() 함수를 사용하여 숫자형 데이터로 알맞게 '형변환(Type Casting)'을 거치도록 코드를 수정하여 해결함.
      
 ### **📁 증빙 자료:**
-  * [2차_AI협업캡처.pdf 첨부 완료] (첨부 후 링크)
-  * [2차과제_실행결과.jpg]
+  * AI 협업사진1 <img width="422" height="661" alt="2차 시나리오 AI 협업1" src="https://github.com/user-attachments/assets/7b48a0bd-29d3-4450-9db1-bd6371d64181" />
+  * AI 협업사진2 <img width="424" height="730" alt="2차 시나리오 AI 협업2" src="https://github.com/user-attachments/assets/986bc937-e755-4b33-9c4b-9042452566f0" />
+  * 과제
 <br>
 
 ## 🟨 [3차 과제: V3.0] 무한 루프와 메뉴 시스템 (반복문) - 향후 작성 예정
