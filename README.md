@@ -105,7 +105,8 @@
    
      
 ### **📁 증빙 자료:**
-  * [3차_AI협업캡처.pdf 첨부 완료] (첨부 후 링크)
+  * <img width="212" height="831" alt="AI협업 증명3" src="https://github.com/user-attachments/assets/6cf8ee51-6fb3-4cb2-8878-89067f66b38e" />
+
   * [3차과제_실행결과.jpg]
 <br>
 
