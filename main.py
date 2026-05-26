@@ -1,47 +1,89 @@
-# 파일이름 : 2차과제 코드 작성
+# 파일이름 : 3차과제 코드 작성
 # 작 성 자 : 김강민
 
-chicken_data = []
+chicken_database = []
 
-print("--- 🍗 닭가슴살 정밀 영양 판독기 V2.0 ---")
+def input_chicken() :
+    global chicken_database
+    print("\n---[1] 닭가슴살 정보 입력 ---")
 
-product_name = input("제품명을 입력하세요: ")
-chicken_data.append(product_name)
+    name = input("제품명을 입력하세요: ")
+    weight = int(input("중량(g)을 입력하세요: "))
+    protein = float(input("총 단백질 함량(g)을 입력하세요: "))
+    price = int(input("가격을 입력하세요(원): "))
+    
+    chicken_database.append([name, weight, protein, price])
+    print(f" ✅ '{name}' 제품이 성공적으로 식단에 등록되었습니다.")
 
-weight = int(input("중량(g)을 입력하세요: "))
-chicken_data.append(weight)
+def show_all_chickens():
+    print("\n--- [2] 전체 식단 목록 조회 ---")
+    
+    if not chicken_database:
+        print("📢 등록된 닭가슴살 데이터가 없습니다. 먼저 데이터를 입력해 주세요.")
+        return
+        
+    total_price = 0
+    print("-" * 50)
 
-protein = float(input("총 단백질 함량(g)을 입력하세요: "))
-chicken_data.append(protein)
+    for i in range(len(chicken_database)):
+        product = chicken_database[i]
+        print(f"{i+1}번 제품: {product[0]} ({product[1]}g) | 단백질: {product[2]}g | 가격: {product[3]}원")
+        total_price += product[3]
 
-price = int(input("가격을 입력하세요(원): "))
-chicken_data.append(price)
+    print("-" * 50)
+    print(f" 💰 현재까지 등록된 닭가슴살 총 구매 비용 : {total_price}원")
 
-efficiency = chicken_data[3] / chicken_data[2]
+def calculate_efficiency(product_info):
+    efficiency = product_info[3] / product_info[2]
+    return efficiency
 
-grade = ""
-title = ""
+def run_diet_analysis():
+    print("\n--- [3] 영양 성분 및 가성비 종합 분석 ---")
 
-if efficiency <= 60 and chicken_data[2] >= 25:
-    # 단백질 1g당 60원 이하이면서 총 단백질이 25g 이상일 때 (최상위 조건)
-    grade = "S등급"
-    title = "🏆 [득근 마스터] 갓성비와 고단백을 모두 잡았습니다!"
-elif efficiency <= 75:
-    grade = "A등급"
-    title = "👍 [훌륭한 선택] 가성비가 아주 좋습니다."
-elif efficiency <= 100:
-    grade = "B등급"
-    title = "🙂 [무난함] 평범한 닭가슴살입니다."
-else:
-    grade = "C등급"
-    title = "💸 [지갑 주의] 단백질 대비 가격이 다소 비쌉니다."
+    if not chicken_database:
+        print(" 📢 분석할 데이터가 없습니다. 먼저 데이터를 입력해주세요.")
+        return
 
-# 5. 최종 결과 출력
-print(f"\n======================================")
-print(f"[{chicken_data[0]}] 분석 결과")
-print(f"======================================")
-print(f"입력된 데이터: {chicken_data}")
-print(f"단백질 1g당 가격: {efficiency:.1f}원")
-print(f"판정 등급: {grade}")
-print(f"코멘트: {title}")
-print(f"======================================")
+    for product in chicken_database:
+        if product[2] < 15.0 :
+            print(f" ⚠️ [{product[0]}] 제품은 단백질이 너무 적어 가성비 분석에서 제외(스킵)합니다.")
+            continue
+
+        eff_value = calculate_efficiency(product)
+        grade = ""
+        title = ""
+
+        if eff_value <= 60 and product[2] >= 25:
+            grade = "S등급"
+            title = " 🏆 [득근 마스터] 갓성비와 고단백을 모두 잡았습니다!!"
+        elif eff_value <= 75:
+            grade = "A등급"
+            title = " 👍 [훌륭한 선택] 가성비가 아주 좋습니다."
+        elif eff_value <= 100:
+            grade = "B등급"
+            title = "🙂 [무난함] 평범한 수준의 닭가슴살입니다."
+        else:
+            grade = "C등급"
+            title = "💸 [텅장 주의] 단백질 대비 가격이 다소 비쌉니다."
+
+        print(f" ▶ [{product[0]}] 단백질 1g당 가격: {eff_value:.1f}원 -> {grade} | {title}")
+
+
+while True:
+    print("\n========== 🍗 닭가슴살 식단 관리 플랫폼 V3.0 ==========")
+    print(" 1. 닭가슴살 입력 2. 전체 식단 조회 3. 영양 가성비 분석 4. 프로그램 종료")
+    print("========================================================")
+
+    menu_choice = input("원하는 메뉴 번호를 선택하세요 (1-4): ")
+    
+    if menu_choice == "1":
+        input_chicken()
+    elif menu_choice == "2":
+        show_all_chickens()
+    elif menu_choice == "3":
+        run_diet_analysis()
+    elif menu_choice == "4":
+        print("\n 👋 프로그램을 종료합니다. 오늘도 오운완! 💪")
+        break
+    else:
+        print(" ❌ 잘못된 입력입니다. 1부터 4 사이의 숫자가 아닙니다."
