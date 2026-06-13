@@ -101,6 +101,16 @@ while True:
 
     if menu_choice == "1":
         input_chicken()
+    elif menu_choice == "2":
+        show_all_chickens()
+    elif menu_choice == "3":
+        run_diet_analysis()
+    elif menu_choice == "4":
+        save_to_file()
+        print("\n 👋 프로그램을 종료합니다. 오늘도 오운완! 💪")
+        break
+    else:
+        print(" ❌ 잘못된 입력입니다. 1부터 4 사이의 숫자가 아닙니다.")
         
     
 
