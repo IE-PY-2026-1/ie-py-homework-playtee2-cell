@@ -148,7 +148,11 @@
      * **해결: 값의 할당을 담당하는 단일 등호(=)로 코드를 수정하여 menu_choice 변수에 사용자가 입력한 번호가 정상 저장되고 하단 if-elif 분기문이 유기적으로 동작하도록 해결함.
        
 ### **📁 증빙 자료:**
-  * <img width="608" height="107" alt="image" src="https://github.com/user-attachments/assets/3000a125-6986-4e80-8ca5-3dfd896a831c" />
+
+<img width="288" height="606" alt="4차_AI협업캡처1" src="https://github.com/user-attachments/assets/6cd8075d-07af-430e-ad99-bcfed76e88b9" />
+
+<img width="281" height="760" alt="4차_AI협업캡처2" src="https://github.com/user-attachments/assets/bf5c098c-cf25-48d7-8ded-dc05a18a618a" />
+
 
   * [4차과제_실행결과.jpg]
 <br>
