@@ -17,7 +17,7 @@ def load_from_file():
 
 def input_chicken():
     global chicken_database
-    print("\--- [1] 닭가슴살 정보 입력 ---")
+    print("\n--- [1] 닭가슴살 정보 입력 ---")
 
     try:
         name = input("제품명을 입력하세요: ")
@@ -89,6 +89,8 @@ def save_to_file():
     with open("chicken_data.txt", "w", encoding="utf-8") as f:
         for product in chicken_database:
             f.write(f"{product[0]},{product[1]},{product[2]},{product[3]}\n")
+    
+    print("💾 chicken_data.txt 파일로 저장되었습니다.")
 
 load_from_file()
 
