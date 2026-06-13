@@ -38,5 +38,25 @@ def show_all_chickens():
         return
     
     total_price = 0
-    print("-" * 50)           
-                  
+    print("-" * 50)          
+
+    for i in range(len(chicken_database)):
+        print(f"{i+1}번 제품 데이터 ➔ ", end="")
+        for j in range(len(chicken_database[i])):
+            print(f"[{chicken_database[i][j]}] ", end="")
+        print()
+        total_price += chicken_database[i][3]
+
+    print("-" * 50)
+    print(f" 💰 현재까지 등록된 닭가슴살 총 구매 비용 : {total_price}원")
+
+def calculate_efficiency(product_info):
+    efficiency = product_info[3] / product_info[2]
+    return efficiency
+
+def run_diet_analysis():
+    print("\n--- [3] 영양 성분 및 가성비 종합 분석 ---")
+
+
+        
+             
