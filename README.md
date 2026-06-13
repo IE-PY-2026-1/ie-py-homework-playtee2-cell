@@ -153,6 +153,6 @@
 
 <img width="281" height="760" alt="4차_AI협업캡처2" src="https://github.com/user-attachments/assets/bf5c098c-cf25-48d7-8ded-dc05a18a618a" />
 
+<img width="674" height="909" alt="image" src="https://github.com/user-attachments/assets/568a765c-2ec6-49b4-aae7-815e4a1e498d" />
 
-  * [4차과제_실행결과.jpg]
 <br>
