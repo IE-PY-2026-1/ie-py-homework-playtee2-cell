@@ -7,7 +7,7 @@ def load_from_file():
     global chicken_database
 
     try:
-        with open("chicken_data.txt", "r", encoding="utd-8) as f:
+        with open("chicken_data.txt", "r", encoding="utf-8") as f:
             for line in f:
                 data = line.strip().split(",")
                 chicken_database.append([data[0], int(data[1]), float(data[2]), int(data[3])])
@@ -21,9 +21,9 @@ def input_chicken():
 
     try:
         name = input("제품명을 입력하세요: ")
-        weight = int(input("중량(g)을 입력하세요: ")
-        protein = float(input("총 단백질 함량(g)을 입력하세요: ")
-        price = int(input("가격을 입력하세요(원): ")
+        weight = int(input("중량(g)을 입력하세요: "))
+        protein = float(input("총 단백질 함량(g)을 입력하세요: "))
+        price = int(input("가격을 입력하세요(원): "))
 
         chicken_database.append([name, weight, protein, price])
         print(f" ✅ '{name}' 제품이 성공적으로 식단에 등록되었습니다.")
@@ -86,7 +86,7 @@ def run_diet_analysis():
         print(f" ▶ [{product[0]}] 단백질 1g당 가격 : {eff_value:.1f}원 -> {grade} | {title}")
 
 def save_to_file():
-    with open("chicken_data.txt, "w", encoding="utf-8) as f:
+    with open("chicken_data.txt", "w", encoding="utf-8") as f:
         for product in chicken_database:
             f.write(f"{product[0]},{product[1]},{product[2]},{product[3]}\n")
 
@@ -97,7 +97,7 @@ while True:
     print(" 1. 닭가슴살 입력 2. 전체 식단 조회 3. 영양 가성비 분석 4. 프로그램 종료")
     print("=========================================================")
 
-    menu_choice == input("원하는 메뉴 번호를 선택하세요 (1-4): ")
+    menu_choice = input("원하는 메뉴 번호를 선택하세요 (1-4): ")
 
     if menu_choice == "1":
         input_chicken()
